@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-express-docker",
+  "version": "1.0.0",
+  "description": "web app express and db postgresql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devMiracle/nodejs-express-docker.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "docker",
+    "postgresql"
+  ],
+  "author": "Miracle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devMiracle/nodejs-express-docker/issues"
+  },
+  "homepage": "https://github.com/devMiracle/nodejs-express-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg-promise": "^10.5.8"
+  }
+}
