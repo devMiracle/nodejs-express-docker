@@ -1,1 +1,7 @@
 node_modules/
+build/
+*/npm-debug.log
+*/.env
+*/.DS_Store
+db/data/
+web/package-lock.json

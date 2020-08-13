@@ -1,0 +1,10 @@
+.card-image {
+    height: 400px;
+    overflow: hidden
+  }
+.card-content {
+    padding: 0 !important;
+}
+.btn-floating {
+    margin-bottom: 30px !important;
+}

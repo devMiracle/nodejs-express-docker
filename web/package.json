@@ -4,6 +4,7 @@
   "description": "web app express and db postgresql",
   "main": "app.js",
   "scripts": {
+    "starttest": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

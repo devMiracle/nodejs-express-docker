@@ -16,11 +16,11 @@ app.route('/api/product')
     .get((request, response) => {
         db.query('SELECT * FROM product ORDER BY id DESC')
             .then((data) => {
-                console.log("DATA:", JSON.stringify(data))
+                // console.log("DATA:", JSON.stringify(data))
                 response.send(`{"data": ${JSON.stringify(data)}}`)
             })
             .catch((error) => {
-                console.log("ERROR:", error)
+                // console.log("ERROR:", error)
                 res.send(`{"data": ${error}}`)
             })
     })
@@ -32,7 +32,7 @@ app.route('/api/product')
                 response.status(201).json({ "message": "a new product was created" })
             })
             .catch((error) => {
-                console.log("ERROR:", error)
+                // console.log("ERROR:", error)
                 response.status(500).json({ "error": error })
             })
     })

@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<title>My Site</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!--Import custom css-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>Home page</h1>
+	<header>
+		<!--свободное место для "шапки" веб-страницы-->
+	</header>
+	<!--секция основного содержимого веб-страницы-->
+	<section>
+    <!--контейнер для сетки с карточками описаний товаров-->
+		<div id="productsContainer" class="container">
+      <div class="row"></div>
+    </div>
+    <!--модальное окно-->
+    <div id="newProductModal" class="modal">
+      <div class="row">
+        <h6>Add a new product</h6>
+      </div>
+      <!--форма добавления описания нового товара-->
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <!--поле ввода названия нового товара-->
+            <div class="input-field col s12 xl6">
+              <input placeholder="Title" id="title" type="text" class="validate">
+              <label for="title">Title</label>
+            </div>
+            <!--поле ввода краткого описания нового товара-->
+            <div class="input-field col s12 xl6">
+              <input placeholder="Description" id="description" type="text" class="validate">
+              <label for="description">Description</label>
+            </div>
+          </div>
+          <div class="row">
+            <!--элемент выбора изображения нового товара-->
+            <div class="input-field col s12 xl6">
+              <div class="file-field input-field">
+                <label for="image">Image</label>
+                <div class="btn">
+                  <span><i class="material-icons right">image</i></span>
+                  <input type="file" id="image">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+            </div>
+            <!--элемент предварительного просмотра изображения нового товара-->
+            <div class="input-field col s12 xl6">
+              <img id="preview" class="responsive-img" src="">
+            </div>
+          </div>
+          <!--кнопка асинхронной отправки данных формы добавления нового товара-->
+          <button class="btn waves-effect waves-light yellow darken-1" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!--плавающая кнопка действия для открытия модального окна с формой добавления нового товара-->
+		<div id="addProductButton" class="fixed-action-btn">
+		  <a href="#newProductModal" class="btn-floating btn-large green modal-trigger">
+		    <i class="large material-icons">add</i>
+		  </a>
+		</div>
+	</section>
+	<footer>
+		<!--свободное место для "подвала" веб-страницы-->
+  </footer>
+  <!--подключение логической составляющей библиотеки materialize-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--подключение библиотеки шаблонизаци на веб-клиенте-->
+  <script type="text/javascript" src="js/hogan-3.0.2.min.js"></script>
+  <!--подключение библиотеки урезания изображений до заданных габаритов на веб-клиенте-->
+  <script type="text/javascript" src="js/ImageTools.js"></script>
+  <!--подключение пользовательского сценария, использующего все подключенные выше библиотеки-->
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
